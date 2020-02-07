@@ -8,7 +8,6 @@ services:
 before_script:
   - npm install
 script:
-  - npm test
   - docker build -t backsiembra .
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
