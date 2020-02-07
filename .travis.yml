@@ -4,6 +4,7 @@ node_js:
 sudo: required
 services:
   - docker
+  - mongodb
 before_script:
   - npm install
 script:
