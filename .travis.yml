@@ -9,10 +9,10 @@ before_script:
   - npm install
 script:
   - npm test
-  - docker build -t back .
+  - docker build -t backsiembra .
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-  - docker tag back $DOCKER_USER/back:$TRAVIS_BUILD_NUMBER
-  - docker push $DOCKER_USER/back:$TRAVIS_BUILD_NUMBER
-  - docker tag back $DOCKER_USER/back:latest
-  - docker push $DOCKER_USER/back:latest
+  - docker tag backsiembra $DOCKER_USER/backsiembra:$TRAVIS_BUILD_NUMBER
+  - docker push $DOCKER_USER/backsiembra:$TRAVIS_BUILD_NUMBER
+  - docker tag backsiembra $DOCKER_USER/backsiembra:latest
+  - docker push $DOCKER_USER/backsiembra:latest
