@@ -3,14 +3,16 @@ let mongoose = require('mongoose');
 let cors = require('cors');
 let bodyParser = require('body-parser');
 let dbConfig = require('./database/db');
+const connectDB = require('./database/conectionDB');
 
 // Express Route
-const siembraRoute = require('../backend/routes/siembra.route')
+const siembraRoute = require('./routes/siembra.route')
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.db, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 }).then(() => {
         console.log('Database sucessfully connected!')
     },
@@ -29,7 +31,7 @@ app.use('/siembras', siembraRoute)
 
 
 // PORT
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
     console.log('Connected to port ' + port)
 })
