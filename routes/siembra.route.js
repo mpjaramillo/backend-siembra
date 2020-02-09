@@ -3,7 +3,7 @@ let mongoose = require('mongoose'),
     router = express.Router();
 
 //Model
-let siembraSchema = require('../models/Siembra');
+let siembraSchema = require('./Siembra');
 
 //Create
 router.route('/register-siembra').post((req, res, next) => {
