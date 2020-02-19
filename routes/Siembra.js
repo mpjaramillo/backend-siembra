@@ -2,16 +2,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let siembraSchema = new Schema({
-    agricultor: {
+    nombre: {
         type: String
     },
-    parcela: {
+    docente: {
         type: String
     },
-    fecha: {
+    horas: {
         type: String
     },
-    especie: {
+    area: {
         type: String
     }
 }, {
