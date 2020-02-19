@@ -18,8 +18,8 @@ after_success:
 
 deploy:
   provider: heroku
-  api_key: 
+  api_key:
     secure: $HEROKU_API_KEY
-  app: microservice-siembra
+  app: microservicio-registrocurso
   on:
-    repo: JeanM1996/backend-siembra
+    repo: mpjaramillo/backend-siembra
