@@ -18,4 +18,4 @@ let siembraSchema = new Schema({
     collection: 'siembra'
 })
 
-module.exports = mongoose.model('Siembra', siembraSchema)
+module.exports = mongoose.model('siembra', siembraSchema)
